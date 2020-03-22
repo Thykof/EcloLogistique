@@ -61,7 +61,7 @@ namespace UnitTestProject1
         
         /// <summary>
         /// FeedFrequency = -1: default Lot object
-        /// If the task's type is Fill, the given lot is build with the signle
+        /// If the task's type is Fill, the given lot is build with the single
         /// argument constructor: <c>public Lot(string tray_id)</c> 
         /// </summary>
         [TestMethod]
@@ -95,7 +95,7 @@ namespace UnitTestProject1
             Lot lot = new Lot(1, "Eggs", 1, 3, 0, 0, 1, 30, new DateTime(2018, 6, 25, 12, 25, 10), DateTime.MinValue, "0");
             DateTime today = new DateTime(2018, 6, 25, 12, 25, 11);
             int when = lot.WhenFeed(today);
-            Assert.AreEqual(1, when);
+            Assert.AreEqual(0, when);
         }
         [TestMethod]
         public void TestWhenFeed11()
